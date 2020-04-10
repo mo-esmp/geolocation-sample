@@ -1,0 +1,62 @@
+version: "3.7"
+
+networks:
+  geo_network:
+
+services:
+  postgres:
+    image: postgres:12-alpine
+    networks:
+      - geo_network
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_DB=geodb
+      - POSTGRES_USER=dbuser
+      - POSTGRES_PASSWORD=dbpassword
+
+  rabbit:
+    image: "rabbitmq:management-alpine"
+    hostname: rabbit
+    networks:
+      - geo_network
+    ports:
+      - 15672:15672
+      - 5672:5672
+    environment:
+      - RABBITMQ_DEFAULT_USER=user
+      - RABBITMQ_DEFAULT_PASS=password
+      - RABBITMQ_DEFAULT_VHOST=geo
+
+  web-api:
+    image: "web-api:latest"
+    build:
+      context:  .
+      dockerfile: src/GeographySample.WebApi/Dockerfile
+    ports:
+      - 5005:80
+      - 5006:443
+    networks:
+      - geo_network
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ConnectionStrings__DefaultConnection: "Host=postgres;Database=geodb;Username=dbuser;Password=dbpassword"
+      RabbitMqConnection: host=rabbit;virtualHost=geo;username=user;password=password;timeout=15
+      WAIT_HOSTS: postgres:5432, rabbit:5672
+    depends_on:
+      - rabbit
+      - postgres
+
+  calculator:
+    image: "calculator:latest"
+    build:
+      context:  .
+      dockerfile: src/GeographySample.DistanceCalculator/Dockerfile
+    networks:
+      - geo_network
+    depends_on:
+      - rabbit
+      - postgres
+    environment:
+      RabbitMqConnection: host=rabbit;virtualHost=geo;username=user;password=password;timeout=15
+      WAIT_HOSTS: postgres:5432, rabbit:5672

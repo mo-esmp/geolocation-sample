@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29926.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeographySample.Core", "src\GeographySample.Core\GeographySample.Core.csproj", "{457CCD02-F0EB-49E4-BE8C-F4FAD8F3F3F7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeographySample.Infrastructure", "src\GeographySample.Infrastructure\GeographySample.Infrastructure.csproj", "{7D53A73B-726E-40BD-81D9-3A603E91072A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeographySample.DistanceCalculator", "src\GeographySample.DistanceCalculator\GeographySample.DistanceCalculator.csproj", "{C5B0C82E-455C-4921-B1E9-47191CF91E87}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeographySample.WebApi", "src\GeographySample.WebApi\GeographySample.WebApi.csproj", "{030252BB-2B34-485F-81BF-D00DB92533FD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2DCA7120-D674-4986-8318-3F86B42EC201}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{C9C47B9F-A79B-4C5B-8771-25B000E34298}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeographySample.IntegrationTest", "test\GeographySample.IntegrationTest\GeographySample.IntegrationTest.csproj", "{1B9B4F12-372A-43B8-9D60-801DDF4788A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{457CCD02-F0EB-49E4-BE8C-F4FAD8F3F3F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{457CCD02-F0EB-49E4-BE8C-F4FAD8F3F3F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{457CCD02-F0EB-49E4-BE8C-F4FAD8F3F3F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{457CCD02-F0EB-49E4-BE8C-F4FAD8F3F3F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D53A73B-726E-40BD-81D9-3A603E91072A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D53A73B-726E-40BD-81D9-3A603E91072A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D53A73B-726E-40BD-81D9-3A603E91072A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D53A73B-726E-40BD-81D9-3A603E91072A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5B0C82E-455C-4921-B1E9-47191CF91E87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5B0C82E-455C-4921-B1E9-47191CF91E87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5B0C82E-455C-4921-B1E9-47191CF91E87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5B0C82E-455C-4921-B1E9-47191CF91E87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{030252BB-2B34-485F-81BF-D00DB92533FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{030252BB-2B34-485F-81BF-D00DB92533FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{030252BB-2B34-485F-81BF-D00DB92533FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{030252BB-2B34-485F-81BF-D00DB92533FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B9B4F12-372A-43B8-9D60-801DDF4788A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B9B4F12-372A-43B8-9D60-801DDF4788A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B9B4F12-372A-43B8-9D60-801DDF4788A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B9B4F12-372A-43B8-9D60-801DDF4788A0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{457CCD02-F0EB-49E4-BE8C-F4FAD8F3F3F7} = {2DCA7120-D674-4986-8318-3F86B42EC201}
+		{7D53A73B-726E-40BD-81D9-3A603E91072A} = {2DCA7120-D674-4986-8318-3F86B42EC201}
+		{C5B0C82E-455C-4921-B1E9-47191CF91E87} = {2DCA7120-D674-4986-8318-3F86B42EC201}
+		{030252BB-2B34-485F-81BF-D00DB92533FD} = {2DCA7120-D674-4986-8318-3F86B42EC201}
+		{1B9B4F12-372A-43B8-9D60-801DDF4788A0} = {C9C47B9F-A79B-4C5B-8771-25B000E34298}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {46C796CF-4BEC-4802-B8BE-F40B644C9F09}
+	EndGlobalSection
+EndGlobal

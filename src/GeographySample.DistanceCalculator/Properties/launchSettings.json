@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "GeographySample.DistanceCalculator": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
